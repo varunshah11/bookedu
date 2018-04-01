@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.varun.bookedu.home_page"
+    tools:showIn="@layout/app_bar_home_page">
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/multiAutoCompleteTextView2"
+        style="@style/autocomplete_textview_style"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hint="Search"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/login"
+        android:textColorLink="@color/dark_grey"
+        android:drawableLeft="@drawable/search_image"
+        android:paddingLeft="4dp"
+        android:textAlignment="textStart"
+        android:textSize="24sp" />
+</RelativeLayout>

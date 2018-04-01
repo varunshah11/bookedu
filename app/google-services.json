@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "124793986885",
+    "firebase_url": "https://bookedu-285e2.firebaseio.com",
+    "project_id": "bookedu-285e2",
+    "storage_bucket": "bookedu-285e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124793986885:android:ae9cc5853d6c3b39",
+        "android_client_info": {
+          "package_name": "com.example.varun.bookedu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124793986885-rp5a7mujoah14usr5kgrugmi0k0cc6ee.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.varun.bookedu",
+            "certificate_hash": "a68a3d1bea88457b85d9265e80d4ff31c80eaa57"
+          }
+        },
+        {
+          "client_id": "124793986885-05os6san47npj8015k626duc992iisut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCTleN18dJ20LsxkEHT1buIFsw1Hgvkzc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124793986885-05os6san47npj8015k626duc992iisut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

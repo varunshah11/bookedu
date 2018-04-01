@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="White">#ffffff</color>
+    <color name="colorPrimary">#2acefe</color>
+    <color name="colorPrimaryDark">#007bcc</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="start_Color">#37a7f8</color>
+    <color name="end_Color">#2DCFFF</color>
+    <color name="login">#c9ccce</color>
+    <color name="google_red">#d34836</color>
+    <color name="Transparent">#00ffffff</color>
+    <color name="dark_grey">#616161</color>
+
+</resources>
