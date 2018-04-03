@@ -16,13 +16,22 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:drawableLeft="@drawable/search_image"
         android:hint="Search"
         android:maxLines="1"
+        android:paddingLeft="4dp"
+        android:textAlignment="textStart"
         android:textColor="@android:color/black"
         android:textColorHint="@color/login"
         android:textColorLink="@color/dark_grey"
-        android:drawableLeft="@drawable/search_image"
-        android:paddingLeft="4dp"
-        android:textAlignment="textStart"
         android:textSize="24sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/myrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/multiAutoCompleteTextView2"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="6dp" />
 </RelativeLayout>
