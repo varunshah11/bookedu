@@ -66,6 +66,7 @@
             android:layout_toEndOf="@+id/textView7"
             android:textColor="@android:color/black"
             android:textColorHighlight="@color/login"
+            android:hint="4th"
             android:textColorHint="@color/login" />
 
         <TextView
@@ -76,14 +77,16 @@
             android:layout_alignParentEnd="true"
             android:layout_margin="4dp"
             android:drawableLeft="@drawable/rupee"
-            android:paddingLeft="16dp"
             android:ems="10"
+            android:fontFamily="serif"
             android:gravity="center_horizontal|center|start"
             android:inputType="number"
+            android:paddingLeft="16dp"
+
+            android:text="250"
             android:textColor="@color/colorPrimary"
             android:textColorHighlight="@color/colorPrimary"
-
-            />
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/rating_textView"

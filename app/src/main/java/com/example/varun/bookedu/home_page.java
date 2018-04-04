@@ -51,14 +51,28 @@ public class home_page extends AppCompatActivity
         setContentView(R.layout.activity_home_page);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        mAuth=FirebaseAuth.getInstance();
+        email=findViewById(R.id.email_textView4);
+        name=findViewById(R.id.name_textView);
+        profile_picture=findViewById(R.id.profile_picture_imageView);
+        mDatabase=FirebaseDatabase.getInstance().getReference().child("sbooks");
+        mDatabase.keepSynced(true);
+        mbooklist=findViewById(R.id.myrecyclerview);
+        mbooklist.setHasFixedSize(true);
+        mbooklist.setLayoutManager(new LinearLayoutManager(this));
+        if(mAuth.getCurrentUser()==null)
+        {
+            finish();
+            startActivity(new Intent(this,MainActivity.class));
+        }
         //FAB button implementation
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                finish();
+                Intent i = new Intent(home_page.this,sellers_page.class);
+                startActivity(i);
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -68,17 +82,6 @@ public class home_page extends AppCompatActivity
         toggle.syncState();
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        mAuth=FirebaseAuth.getInstance();
-        email=findViewById(R.id.email_textView);
-        name=findViewById(R.id.name_textView);
-        profile_picture=findViewById(R.id.profile_picture_imageView);
-        FirebaseUser user= mAuth.getCurrentUser();
-
-        mDatabase=FirebaseDatabase.getInstance().getReference().child("sbooks");
-        mDatabase.keepSynced(true);
-        mbooklist=findViewById(R.id.myrecyclerview);
-        mbooklist.setHasFixedSize(true);
-        mbooklist.setLayoutManager(new LinearLayoutManager(this));
 
     }
 
@@ -92,6 +95,8 @@ public class home_page extends AppCompatActivity
                 viewHolder.setTitle(model.getTitle());
                 viewHolder.setAuthor1(model.getAuthor1());
                 viewHolder.setImage_url(getApplicationContext(),model.getImage_url());
+                viewHolder.setEdition(model.getEdition());
+                viewHolder.setPrice(model.getPrice());
             }
         };
         mbooklist.setAdapter(firebaseRecyclerAdapter);
@@ -122,6 +127,16 @@ public class home_page extends AppCompatActivity
         {
             ImageView book_image= (ImageView)mview.findViewById(R.id.book_image_imageView);
             Picasso.with(cxt).load(image_url).into(book_image);
+        }
+        public void setEdition(String edition)
+        {
+            TextView edition_number=(TextView)mview.findViewById(R.id.edition_number_textView);
+            edition_number.setText(edition);
+        }
+        public void setPrice(long price)
+        {
+            TextView price_=(TextView)mview.findViewById(R.id.price_textView);
+            price_.setText(String.valueOf(price));
         }
 
     }
@@ -158,6 +173,8 @@ public class home_page extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -175,6 +192,7 @@ public class home_page extends AppCompatActivity
 
         } else if (id == R.id.nav_logout) {
             FirebaseAuth.getInstance().signOut();
+            finish();
             Intent i = new Intent(home_page.this,MainActivity.class);
             startActivity(i);
         }
