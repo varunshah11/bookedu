@@ -42,6 +42,23 @@
         <item name="android:background">@drawable/auto_textview_background</item>
     </style>
 
+    <style name="Imagebtn_style">
+        <!-- Customize your theme here. -->
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/circle_image_background</item>
+    </style>
+
+    <style name="editText_style">
+        <!-- Customize your theme here. -->
+        <item name="android:background">@drawable/edittext_background</item>
+        <item name="android:textColor">@color/start_Color</item>
+        <item name="android:colorAccent">@color/start_Color</item>
+    </style>
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#FFD700</item>
+        <item name="colorControlActivated">@color/login</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

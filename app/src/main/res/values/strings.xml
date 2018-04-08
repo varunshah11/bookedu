@@ -6,6 +6,29 @@
     <string name="Rs">\u20b9</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <array name="college_names">
+        <item>Enter College name</item>
+        <item>MPSTME</item>
+        <item>D.J Sanghvi</item>
+        <item>TSEC</item>
+        <item>VJTI</item>
+    </array>
+    <array name="stream_names">
+        <item>Enter Stream</item>
+        <item>Computers</item>
+        <item>EXTC</item>
+        <item>I.T</item>
+        <item>Chemical</item>
+        <item>Mechanical</item>
+        <item>Architecture</item>
+    </array>
+    <array name="year">
+        <item>Enter Year</item>
+        <item>First year</item>
+        <item>Second Year</item>
+        <item>Third Year</item>
+        <item>Fourth Year</item>
+    </array>
 
     <string name="action_settings">Settings</string>
 </resources>
